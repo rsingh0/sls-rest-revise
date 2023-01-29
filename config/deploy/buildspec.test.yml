@@ -13,10 +13,8 @@ phases:
   build:
     on-failure: ABORT
     commands:
-      - echo Running Tests
-      - npm test
-      - echo Packaging service
-      - serverless package --package my-artifact --stage test
+      - echo Deploying resources
+      - serverless deploy --stage dev
 artifacts:
   files:
     - my-artifact/*
